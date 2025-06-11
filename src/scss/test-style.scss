@@ -1,0 +1,466 @@
+.container {
+  max-width: 1200px; /* максимальная ширина контейнера */
+  width: 90%; /* ширина по умолчанию — 90% экрана */
+  margin: 0 auto; /* центрирование по горизонтали */
+  padding: 0 20px; /* отступы слева и справа */
+  box-sizing: border-box; /* чтобы padding не увеличивал ширину */
+  // outline: solid rgba(255, 0, 0, 0.425);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #0b1d26;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+.background-wrapper {
+  position: relative;
+  z-index: 0;
+  background-image: url("../../img/bg-test.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgb(21, 44, 56) 0%,
+    rgba(23, 50, 63, 0.123) 50%,
+    rgb(11, 29, 38) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+/* header */
+.header {
+  padding-top: 10px;
+  padding-bottom: 140px;
+  position: relative;
+  z-index: 2;
+
+  &__box {
+    display: flex;
+  }
+
+  &__logo {
+    color: #fff;
+    font-family: "Chronicle Display";
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.32px;
+    text-transform: capitalize;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 300px;
+    margin-right: 342px;
+  }
+
+  &__icon {
+    margin-bottom: -3px;
+    margin-right: 3px;
+  }
+
+  &__nav {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__btn {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 700;
+    background: none;
+  }
+}
+
+// hero
+.hero {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // центрируем по горизонтали
+  justify-content: center;
+  text-align: center;
+
+  &__title {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 100px;
+    text-transform: capitalize;
+  }
+
+  &__subtitle {
+  color: #d1dce5; // мягкий, светлый оттенок
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.7; // более удобочитаемый
+  max-width: 900px;
+  margin: 20px auto;
+  margin-top: 40px;
+  text-align: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    background-color: #357eb3ea;
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 50px;
+    border-radius: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 6px 10px rgba(22, 188, 194, 0.212);
+
+    &:hover,
+    &:focus {
+      background-color: #448cbd;
+      box-shadow: 0 8px 12px rgba(132, 217, 251, 0.3);
+      outline: none;
+    }
+  }
+}
+
+//slider
+
+.slider {
+  width: 90%;          
+  max-width: 1600px; 
+  height: 800px;    
+  margin: 0 auto;       
+  position: relative;
+  overflow: hidden;
+  padding-top: 160px;
+  position: relative;
+  z-index: 2;
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .slide-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 30%; // чуть поднять картинку
+    filter: brightness(0.85);
+    z-index: 1;
+  }
+
+  .slide-caption {
+    position: relative;
+    z-index: 3;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    max-width: 80%;
+    color: #fbd784;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fbd784;
+    width: 48px;
+    height: 48px;
+margin-top: 55px;
+  }
+
+  .swiper-pagination-bullet {
+    background: #fbd784;
+    opacity: 0.7;
+
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    background:
+      linear-gradient(to right, rgba(11, 29, 38, 0.6), transparent 15%, transparent 85%, rgba(11, 29, 38, 0.6)),
+      linear-gradient(to bottom, rgba(11, 29, 38, 0.6), transparent 15%, transparent 85%, rgba(11, 29, 38, 0.6));
+  }
+}
+
+// levels
+.levels {
+  padding-top: 200px; // немного отступов с краёв экрана
+
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px; // внутренний отступ внутри сетки
+  }
+
+  &__item {
+    background-color: #0e2a38;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    padding: 28px 24px; // увеличенный внутренний отступ
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__name {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 700;
+    color: #fbd784;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #d6e3ec;
+    line-height: 1.7;
+  }
+}
+.levels__item {
+  background-color: #0e2a38;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px; /* Добавил padding для внутреннего отступа всей карточки */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(251, 215, 132, 0.25);
+  }
+}
+
+.levels__content {
+  padding: 16px; /* Можно немного уменьшить, так как есть padding у карточки */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+
+
+
+// test
+
+.quiz {
+  padding-top: 150px;
+
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fbd784;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+.quiz__result {
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  max-width: 720px;
+  margin: 30px auto 60px;
+  font-family: "Montserrat";
+  text-align: center;
+  font-size: 22px;        
+  font-weight: 600;
+}
+
+  &__form {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__card {
+    background-color: #0b1d26;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(251, 215, 132, 0.15);
+    margin-bottom: 35px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 10px 30px rgba(251, 215, 132, 0.3);
+    }
+
+    .quiz__question-text {
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      color: #cfd8dc;
+      margin-bottom: 15px;
+      cursor: pointer;
+      position: relative;
+      padding-left: 40px;
+      user-select: none;
+
+      input[type="radio"] {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        appearance: none;
+        border: 2.5px solid #fbd784;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+
+        &:checked {
+          background-color: #fbd784;
+          border-color: #fbd784;
+        }
+
+        &:focus {
+          outline: 2px solid #fbd784;
+        }
+      }
+
+      &:hover {
+        color: #fbd784;
+      }
+    }
+  }
+
+  &__btn {
+     display: block;        // чтобы кнопка заняла всю строку
+  margin: 20px auto 0;
+    background-color: #fbd784;
+    color: #0b1d26;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 50px;
+    border-radius: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 6px 10px rgba(251, 215, 132, 0.2);
+
+    &:hover {
+      background-color: #fceca0;
+      box-shadow: 0 8px 12px rgba(226, 182, 81, 0.3);
+      outline: none;
+    }
+  }
+}
+
+
+
+  h2{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: "Montserrat";
+    color: #fbd784;
+  }
+
+  p {
+    font-size: 18px;
+    color: #d1dce5;
+    margin: 0;
+  }
+
+

@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx parcel src/index.html",
-    "build": "parcel build src/index.html --no-cache --public-url ./",
+    "start": "npx parcel src/html/index.html",
+    "build": "parcel build src/html/index.html --no-cache --public-url ./",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
