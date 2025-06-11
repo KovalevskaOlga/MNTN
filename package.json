@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/KovalevskaOlga/MNTN#readme",
   "devDependencies": {
-    "parcel": "^2.15.2"
+    "@parcel/transformer-sass": "^2.15.2",
+    "parcel": "^2.15.2",
+    "sass": "^1.89.2"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
