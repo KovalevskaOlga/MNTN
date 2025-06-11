@@ -160,15 +160,15 @@
       });
     }
   }
-})({"hvc7Y":[function(require,module,exports,__globalThis) {
+})({"kKqPq":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 58419;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "9b9432380807854b";
+module.bundle.HMR_BUNDLE_ID = "93e019d2037507ea";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_SERVER_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -666,7 +666,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"3Ux1B":[function(require,module,exports,__globalThis) {
+},{}],"5IrjP":[function(require,module,exports,__globalThis) {
 console.log("test.js \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D \u0438 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442");
 document.addEventListener("DOMContentLoaded", ()=>{
     const form = document.getElementById("hiking-quiz");
@@ -705,6 +705,6 @@ document.querySelector('.btn-start-test').addEventListener('click', ()=>{
     });
 });
 
-},{}]},["hvc7Y","3Ux1B"], "3Ux1B", "parcelRequire9616", {})
+},{}]},["kKqPq","5IrjP"], "5IrjP", "parcelRequire9616", {})
 
-//# sourceMappingURL=test.0807854b.js.map
+//# sourceMappingURL=test.037507ea.js.map

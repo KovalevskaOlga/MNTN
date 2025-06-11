@@ -2,4 +2,4 @@ console.log("test.js подключен и работает"),document.addEventL
       <h2>Your hiking level: <span style="color:#fbd784";>${i}</span></h2>
       <p>Total points scored: ${d}</p>
     `,t.scrollIntoView({behavior:"smooth"})})}),document.querySelector(".btn-start-test").addEventListener("click",()=>{document.getElementById("quiz-section").scrollIntoView({behavior:"smooth"})});
-//# sourceMappingURL=test.8860c20c.js.map
+//# sourceMappingURL=test.3b098c0e.js.map
